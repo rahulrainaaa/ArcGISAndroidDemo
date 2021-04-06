@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_simple_graphics"
+    app:startDestination="@id/MapFragment">
+
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="app.demo.arcgisandroidapp.simpleEsriGraphics.mapScreen.MapScreenFragment"
+        android:label="Map Screen"
+        tools:layout="@layout/fragment_map">
+
+        <action
+            android:id="@+id/action_MapFragment_to_FormFragment"
+            app:destination="@id/FormFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FormFragment"
+        android:name="app.demo.arcgisandroidapp.simpleEsriGraphics.formScreen.FormScreenFragment"
+        android:label="Graphic Attribute"
+        tools:layout="@layout/fragment_form">
+
+        <action
+            android:id="@+id/action_FormFragment_to_MapFragment"
+            app:destination="@id/MapFragment"
+            app:popUpTo="@id/MapFragment" />
+
+    </fragment>
+</navigation>

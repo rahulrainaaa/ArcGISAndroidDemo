@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="sharedViewModel"
+            type="app.demo.arcgisandroidapp.simpleEsriGraphics.activity.SharedViewModel" />
+
+        <variable
+            name="viewModel"
+            type="app.demo.arcgisandroidapp.simpleEsriGraphics.formScreen.FormScreenViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            tools:context=".simpleEsriGraphics.formScreen.FormScreenFragment">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Name"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/colorTextBoxStroke"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                app:startIconDrawable="@drawable/ic_edit">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{viewModel.name}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/category"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Category"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/colorTextBoxStroke"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name"
+                app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                app:startIconDrawable="@drawable/ic_category">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:maxLength="40"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{viewModel.category}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sub_category"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Sub Category"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/colorTextBoxStroke"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category"
+                app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                app:startIconDrawable="@drawable/ic_sub_category">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:maxLength="40"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{viewModel.subCategory}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tag"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Tag"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/colorTextBoxStroke"
+                app:counterEnabled="true"
+                app:counterMaxLength="22"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sub_category"
+                app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                app:startIconDrawable="@drawable/ic_label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:maxLength="22"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@{viewModel.tag}"
+                    android:textEditSuggestionItemLayout="@array/array_graphic_tag" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/description"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Description"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxStrokeColor="@color/colorTextBoxStroke"
+                app:counterEnabled="true"
+                app:counterMaxLength="240"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tag"
+                app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+                app:startIconDrawable="@drawable/ic_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="all"
+                    android:lines="5"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:scrollIndicators="start"
+                    android:scrollbars="vertical"
+                    android:text="@{viewModel.description}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/color_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/colorChipGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:foregroundGravity="center"
+                    android:scrollIndicators="bottom"
+                    android:soundEffectsEnabled="true"
+                    app:checkedChip="@id/chip_d"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_a"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagA" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_b"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagB" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_c"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagC" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_d"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagD" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_e"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagE" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_f"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagF" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_g"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagG" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_h"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagH" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_i"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagI" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_j"
+                        android:layout_width="@dimen/chip_color_tag_wid"
+                        android:layout_height="@dimen/chip_color_tag"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/ColorTagJ" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:paddingStart="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="4dp"
+                android:text="Save Graphic"
+                app:cornerRadius="4dp"
+                app:elevation="4dp"
+                app:icon="@drawable/ic_save"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/color_selector"
+                app:rippleColor="@color/colorLightPrimary"
+                app:shapeAppearance="?attr/shapeAppearanceLargeComponent"
+                app:strokeColor="@color/colorPrimaryDark"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="Cancel"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="4dp"
+                app:elevation="4dp"
+                app:icon="@drawable/ic_close"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_save"
+                app:layout_constraintEnd_toStartOf="@+id/btn_save"
+                app:layout_constraintTop_toTopOf="@+id/btn_save"
+                app:layout_constraintVertical_bias="0.0"
+                app:rippleColor="@color/colorLightPrimary"
+                app:shapeAppearance="?attr/shapeAppearanceLargeComponent"
+                app:strokeColor="@color/colorPrimaryDark"
+                app:strokeWidth="1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

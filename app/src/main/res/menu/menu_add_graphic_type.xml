@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/item_menu_point"
+        android:icon="@drawable/ic_point"
+        android:title="Point"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/item_menu_multi_point"
+        android:icon="@drawable/ic_multi_point"
+        android:title="MultiPoint"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/item_menu_polyline"
+        android:icon="@drawable/ic_polyline"
+        android:title="PolyLine"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/item_menu_polygon"
+        android:icon="@drawable/ic_area"
+        android:title="Polygon"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_menu_free_line"
+        android:icon="@drawable/ic_free_hand"
+        android:title="Free Hand Line"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/item_menu_free_polygon"
+        android:icon="@drawable/ic_edit"
+        android:title="Free Hand Polygon"
+        app:showAsAction="always" />
+</menu>
